@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4x4 Chess Learning Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="hud">
+        <div class="hud__card">
+          <div class="hud__label">Score</div>
+          <div class="hud__value" id="scoreValue">0</div>
+        </div>
+        <div class="hud__card">
+          <div class="hud__label">Current turn</div>
+          <div class="hud__value" id="turnValue">White</div>
+        </div>
+      </header>
+
+      <main class="board-area" aria-label="Chess board">
+        <div class="board-frame" id="boardFrame"></div>
+      </main>
+
+      <footer class="controls">
+        <div class="setup-row">
+          <label class="setup-label">Board size</label>
+          <select class="setup-select" id="boardSizeSelect">
+            <option value="4">4×4</option>
+            <option value="5">5×5</option>
+          </select>
+        </div>
+        <div class="setup-row" id="pieceCountRow" style="display: none;">
+          <label class="setup-label">Pieces per side</label>
+          <select class="setup-select" id="pieceCountSelect">
+            <option value="2">2 pieces</option>
+            <option value="3">3 pieces</option>
+          </select>
+        </div>
+        <div class="setup-row">
+          <label class="setup-label">Theme</label>
+          <select class="setup-select" id="themeSelect">
+            <option value="dark">Dark</option>
+            <option value="pink">Pink</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
+        <button class="btn" id="resetBtn" type="button">Reset Game</button>
+        <div class="message" id="messageArea" role="status" aria-live="polite">Make your move.</div>
+      </footer>
+    </div>
+  </body>
+</html>
